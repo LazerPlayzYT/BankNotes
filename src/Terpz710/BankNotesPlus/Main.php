@@ -14,8 +14,10 @@ use davidglitch04\libEco\libEco;
 class Main extends PluginBase implements Listener {
 
     public function onEnable(): void {
+        $libEco = new libEco();
+
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
-        $this->getServer()->getCommandMap()->register("banknotesplus", new BankNotesCommand($this, LibCo $libco));
+        $this->getServer()->getCommandMap()->register("banknotesplus", new BankNotesCommand($this, $libEco)); // Pass both instances
     }
 
     public function onPlayerInteract(PlayerInteractEvent $event): void {
