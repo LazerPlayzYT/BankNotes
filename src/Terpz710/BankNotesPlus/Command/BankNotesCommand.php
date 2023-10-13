@@ -14,7 +14,7 @@ class BankNotesCommand extends Command {
     private $plugin;
     private $libEco;
 
-    public function __construct(Main $plugin, libEco $libEco) {
+    public function __construct(BankNotesPlus $plugin, libEco $libEco) {
         parent::__construct("banknotesplus", "Convert in-game money into bank notes", "/banknotesplus {amount}");
         $this->setPermission("banknotesplus.cmd");
         $this->plugin = $plugin;
