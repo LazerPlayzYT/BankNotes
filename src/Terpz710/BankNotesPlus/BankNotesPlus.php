@@ -2,8 +2,8 @@
 
 namespace Terpz710\BankNotesPlus;
 
-use pocketmine\item\enchantment\EnchantmentInstance; // Include the enchantment instance
-use pocketmine\item\enchantment\Enchantment;
+use pocketmine\item\enchantment\EnchantmentInstance;
+use pocketmine\item\enchantment\VanillaEnchantments; // Include the VanillaEnchantments class
 use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerInteractEvent;
 use pocketmine\item\VanillaItems;
@@ -50,7 +50,7 @@ class BankNotesPlus extends PluginBase implements Listener {
         ]);
         $bankNote->getNamedTag()->setFloat("Amount", $amount);
 
-        $enchantment = new EnchantmentInstance(Enchantment::getEnchantment(Enchantment::TYPE_INVALID), 1);
+        $enchantment = new EnchantmentInstance(VanillaEnchantments::FORTUNE(), 3);
         $bankNote->addEnchantment($enchantment);
 
         $player->getInventory()->addItem($bankNote);
