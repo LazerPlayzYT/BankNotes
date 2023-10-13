@@ -28,25 +28,13 @@ class Main extends PluginBase implements Listener {
             $item->setCount($item->getCount() - 1);
             $player->getInventory()->setItemInHand($item);
 
-            if (libEco::isInstall()) {
-                libEco::addMoney($player, $amount);
-                $player->sendMessage(TF::GREEN . "You have claimed $" . $amount . " from the bank note.");
-            } else {
-                $player->sendMessage(TF::RED . "libEco is not available. Unable to add money to your balance.");
-            }
+            libEco::addMoney($player, $amount);
+            $player->sendMessage(TF::GREEN . "You have claimed $" . $amount . " from the bank note.");
         }
     }
 
     public function hasEnoughMoney(Player $player, float $amount): bool {
-        $balance = 0;
-
-        if (libEco::isInstall()) {
-            libEco::myMoney($player, function(float $money) use (&$balance) {
-                $balance = $money;
-            });
-        }
-
-        return $balance >= $amount;
+        return true;
     }
 
     public function convertToBankNote(Player $player, float $amount): void {
