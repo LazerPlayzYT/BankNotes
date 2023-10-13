@@ -6,7 +6,7 @@ use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerInteractEvent;
 use pocketmine\item\VanillaItems;
 use pocketmine\plugin\PluginBase;
-use pocketmine\Player;
+use pocketmine\player\Player;
 use pocketmine\utils\TextFormat as TF;
 use Terpz710\BankNotesPlus\Command\BankNotesCommand;
 use Terpz710\libEco\libEco;
