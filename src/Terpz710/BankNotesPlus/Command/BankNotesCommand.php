@@ -6,7 +6,7 @@ use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 use pocketmine\player\Player;
 use pocketmine\utils\TextFormat as TF;
-use Terpz710\BankNotesPlus\Main;
+use Terpz710\BankNotesPlus\BankNotesPlus;
 use davidglitch04\libEco\libEco;
 
 class BankNotesCommand extends Command {
