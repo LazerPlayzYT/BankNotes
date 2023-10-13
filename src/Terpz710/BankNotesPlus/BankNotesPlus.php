@@ -11,7 +11,7 @@ use pocketmine\utils\TextFormat as TF;
 use Terpz710\BankNotesPlus\Command\BankNotesCommand;
 use davidglitch04\libEco\libEco;
 
-class Main extends PluginBase implements Listener {
+class BankNotesPlus extends PluginBase implements Listener {
 
     public function onEnable(): void {
         $libEco = new libEco();
