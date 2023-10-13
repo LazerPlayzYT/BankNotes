@@ -1,6 +1,6 @@
 <?php
 
-namespace Terpz710\BankNotesPlus\Main;
+namespace Terpz710\BankNotesPlus;
 
 use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerInteractEvent;
