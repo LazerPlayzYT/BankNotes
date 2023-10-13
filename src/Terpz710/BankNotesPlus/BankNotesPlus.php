@@ -2,6 +2,8 @@
 
 namespace Terpz710\BankNotesPlus;
 
+use pocketmine\item\enchantment\EnchantmentInstance; // Include the enchantment instance
+use pocketmine\item\enchantment\Enchantment;
 use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerInteractEvent;
 use pocketmine\item\VanillaItems;
@@ -47,6 +49,9 @@ class BankNotesPlus extends PluginBase implements Listener {
             "Right-click to redeem"
         ]);
         $bankNote->getNamedTag()->setFloat("Amount", $amount);
+
+        $enchantment = new EnchantmentInstance(Enchantment::getEnchantment(Enchantment::TYPE_INVALID), 1);
+        $bankNote->addEnchantment($enchantment);
 
         $player->getInventory()->addItem($bankNote);
     }
