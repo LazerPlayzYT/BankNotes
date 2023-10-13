@@ -9,7 +9,7 @@ use pocketmine\plugin\PluginBase;
 use pocketmine\player\Player;
 use pocketmine\utils\TextFormat as TF;
 use Terpz710\BankNotesPlus\Command\BankNotesCommand;
-use Terpz710\libEco\libEco;
+use davidglitch04\libEco\libEco;
 
 class Main extends PluginBase implements Listener {
 
