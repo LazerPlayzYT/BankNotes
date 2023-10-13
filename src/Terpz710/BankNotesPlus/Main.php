@@ -15,7 +15,7 @@ class Main extends PluginBase implements Listener {
 
     public function onEnable(): void {
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
-        $this->getServer()->getCommandMap()->register("banknotesplus", new BankNotesCommand($this));
+        $this->getServer()->getCommandMap()->register("banknotesplus", new BankNotesCommand($this, LibCo $libco));
     }
 
     public function onPlayerInteract(PlayerInteractEvent $event): void {
